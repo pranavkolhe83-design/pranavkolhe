@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import heroImg from "@/assets/hero-portrait.png";
 
 const stats = [
   { value: "4+", label: "Years Of Experience" },
@@ -14,10 +13,10 @@ const HeroSection = () => {
       {/* Blob */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] hero-blob rounded-full blur-3xl opacity-30 pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         {/* Left */}
         <motion.div
-          className="lg:col-span-5 z-10"
+          className="lg:col-span-7 z-10"
           initial={{ opacity: 0, x: -40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7 }}
@@ -31,7 +30,7 @@ const HeroSection = () => {
           <p className="text-3xl md:text-4xl font-heading font-light text-foreground mb-6">
             Web Designer
           </p>
-          <p className="text-muted-foreground max-w-md mb-8">
+          <p className="text-muted-foreground max-w-lg mb-8">
             Crafting beautiful digital experiences with modern design principles and cutting-edge technology.
           </p>
 
@@ -51,26 +50,9 @@ const HeroSection = () => {
           </div>
         </motion.div>
 
-        {/* Center image */}
-        <motion.div
-          className="lg:col-span-4 flex justify-center relative z-10"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
-        >
-          <div className="relative">
-            <div className="absolute -top-8 -right-8 w-72 h-72 md:w-96 md:h-96 bg-primary rounded-full opacity-80" />
-            <img
-              src={heroImg}
-              alt="Pranav Kolhe"
-              className="relative z-10 w-72 h-72 md:w-96 md:h-96 object-cover rounded-full border-4 border-background"
-            />
-          </div>
-        </motion.div>
-
         {/* Right stats */}
         <motion.div
-          className="lg:col-span-3 z-10"
+          className="lg:col-span-5 z-10"
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, delay: 0.4 }}
